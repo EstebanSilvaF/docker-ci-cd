@@ -1,2 +1,56 @@
-vscode/
-test15b/.metadata/
+# --- Maven / Java (Spring Boot) ---
+**/target/
+**/build/
+**/dist/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven Wrapper (se descarga al ejecutar mvnw)
+**/.mvn/wrapper/maven-wrapper.jar
+
+# --- IDEs y editores ---
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / STS / Spring Tool Suite
+**/.classpath
+**/.project
+**/.settings/
+**/.metadata/
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+# NetBeans
+**/nbproject/private/
+**/nbbuild/
+**/nbdist/
+**/.nb-gradle/
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# --- Logs y temporales ---
+*.log
+logs/
+**/HELP.md
+
+# --- Secretos y entorno local ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# --- Docker (datos locales, no el compose) ---
+docker-compose.override.yml
