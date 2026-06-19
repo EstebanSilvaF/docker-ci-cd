@@ -38,10 +38,10 @@ jobs:
     needs: build-backend
     runs-on: self-hosted
     steps:
-      - name: Permitir ejecución de scripts PS
+      - name: Ver políticas
         shell: powershell
-        run: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-        
+        run: |
+    Get-ExecutionPolicy -List
       - name: Actualizar contenedor backend
         run: |
           cd C:\Users\deiber.ferreira\Documents\proyecto_docker_compose_limpio
