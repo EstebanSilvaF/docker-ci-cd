@@ -34,3 +34,13 @@ jobs:
         run: docker push estebansilvaf/backend-springboot:latest
       - name: verificar JAR generado
         run: ls -la target
+  deploy-backend:
+    needs: build-backend
+    runs-on: self-hosted
+    steps:
+      - name: Actualizar contenedor backend
+        run: |
+          cd C:\Users\deiber.ferreira\Documents\proyecto_docker_compose_limpio
+          docker compose pull backend
+          docker compose up -d backend
+          
