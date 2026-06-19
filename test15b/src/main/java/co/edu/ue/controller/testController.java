@@ -28,6 +28,11 @@ public class testController {
 		return "Hola desde CI con GitHub Actions";
 	}
 
+	@GetMapping(value="/Hola_mundo")
+	public String hw() {
+		return "Hola mundoooooooooo";
+	}
+
 	@GetMapping(value="/sumar")
     public int sumar(
             @RequestParam int numero1,
