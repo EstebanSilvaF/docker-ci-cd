@@ -33,6 +33,11 @@ public class testController {
 		return "Hola mundoooooooooo";
 	}
 
+	@GetMapping(value="/intento1")
+	public String intento1() {
+		return "Se pudo:D";
+	}
+
 	@GetMapping(value="/sumar")
     public int sumar(
             @RequestParam int numero1,
