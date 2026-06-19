@@ -41,7 +41,7 @@ jobs:
       - name: Ver políticas
         shell: powershell
         run: |
-    Get-ExecutionPolicy -List
+          Get-ExecutionPolicy -List
       - name: Actualizar contenedor backend
         run: |
           cd C:\Users\deiber.ferreira\Documents\proyecto_docker_compose_limpio
