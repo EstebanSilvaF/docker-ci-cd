@@ -14,42 +14,48 @@ import co.edu.ue.service.IPruebaService;
 @RestController
 @CrossOrigin(origins = "*")
 public class testController {
-	
+
 	@Autowired
 	IPruebaService services;
-	
-	@GetMapping(value="/saludar")
+
+	@GetMapping(value = "/saludar")
 	public String hello() {
 		return "Hola estudiantes de la 15A";
 	}
-	
-	@GetMapping(value="/test_ci")
+
+	@GetMapping(value = "/test_ci")
 	public String ci() {
 		return "Hola desde CI con GitHub Actions";
 	}
 
-	@GetMapping(value="/Hola_mundo")
+	@GetMapping(value = "/Hola_mundo")
 	public String hw() {
 		return "Hola mundoooooooooo";
 	}
 
-	@GetMapping(value="/intento1")
+	@GetMapping(value = "/intento1")
 	public String intento1() {
 		return "Se pudo:D";
 	}
 
-	@GetMapping(value="/sumar")
-    public int sumar(
-            @RequestParam int numero1,
-            @RequestParam int numero2) {
+	@GetMapping(value = "/sumar")
+	public int sumar(
+			@RequestParam int numero1,
+			@RequestParam int numero2) {
 
-        return numero1 + numero2;
-    }
-	
-	@GetMapping(value="/lista")
-	public List<Prueba> getTesting(){
+		return numero1 + numero2;
+	}
+
+	@GetMapping(value = "/restar")
+	public int restar(
+			@RequestParam int numero1,
+			@RequestParam int numero2) {
+		return numero1 - numero2;
+	}
+
+	@GetMapping(value = "/lista")
+	public List<Prueba> getTesting() {
 		return services.listPrueba();
 	}
-	
 
 }
