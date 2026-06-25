@@ -50,8 +50,9 @@ public class testController {
 	@GetMapping(value = "/restar")
 	public int restar(
 			@RequestParam int numero1,
-			@RequestParam int numero2) {
-		return numero1 - numero2;
+			@RequestParam int numero2,
+			@RequestParam int numero3) {
+		return numero1 - numero2 - numero3;
 	}
 
 	@GetMapping(value = "/lista")

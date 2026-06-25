@@ -62,8 +62,9 @@
              function restar() {
             const numero1 = document.getElementById("numero3").value;
             const numero2 = document.getElementById("numero4").value;
+            const numero3 = document.getElementById("numero5").value;
 
-            fetch(`${API_URL}/restar?numero1=${numero1}&numero2=${numero2}`)
+            fetch(`${API_URL}/restar?numero1=${numero1}&numero2=${numero2}&numero3=${numero3}`)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("resultadoResta").innerText = "Resultado: " + data;
