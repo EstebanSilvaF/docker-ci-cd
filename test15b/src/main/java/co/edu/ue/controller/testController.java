@@ -44,7 +44,7 @@ public class testController {
 			@RequestParam int numero2,
 			@RequestParam int numero3) {
 
-		return numero1 + numero2;
+		return numero1 + numero2 + numero3;
 	}
 
 	@GetMapping(value = "/restar")
