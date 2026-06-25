@@ -37,7 +37,7 @@ jobs:
   deploy-backend:
     needs: build-backend
     runs-on: self-hosted
-      steps:
+    steps:
       - name: Ver políticas
         shell: powershell
         run: |
