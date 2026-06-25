@@ -20,9 +20,9 @@
     <p id="resultadoSuma"></p>
 
     <h2>Restar dos números</h2>
-    <input type="number" id="numero3" placeholder="Número 1">
-    <input type="number" id="numero4" placeholder="Número 2">
-    <input type="number" id="numero5" placeholder="Número 3">
+    <input type="number" id="numero4" placeholder="Número 1">
+    <input type="number" id="numero5" placeholder="Número 2">
+    <input type="number" id="numero6" placeholder="Número 3">
     <button onclick="restar()">Restar</button>
     <p id="resultadoResta"></p>
 
@@ -61,11 +61,11 @@
                 });
         }
              function restar() {
-            const numero1 = document.getElementById("numero3").value;
-            const numero2 = document.getElementById("numero4").value;
-            const numero3 = document.getElementById("numero5").value;
+            const numero4 = document.getElementById("numero4").value;
+            const numero5 = document.getElementById("numero5").value;
+            const numero6 = document.getElementById("numero6").value;
 
-            fetch(`${API_URL}/restar?numero1=${numero1}&numero2=${numero2}&numero3=${numero3}`)
+            fetch(`${API_URL}/restar?numero4=${numero4}&numero5=${numero5}&numero6=${numero6}`)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("resultadoResta").innerText = "Resultado: " + data;
